@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.spwandroid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_72"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginWindow"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- All Product Activity -->
+        <activity
+            android:name="db.operations.GetAllEmployees"
+            android:label="Add New Product" >
+        </activity>
+        <activity android:name="db.operations.GetAllProjects" >
+        </activity>
+        <activity android:name="db.operations.GetAllTasks" >
+        </activity>
+
+        <!-- All Product Activity -->
+
+        <activity android:name="AdminActivity" >
+        </activity>
+
+        <!-- Add Product Activity -->
+        <activity
+            android:name=".AddNewWorker"
+            android:label="Add New Product" >
+        </activity>
+
+        <!-- Edit Product Activity -->
+        <activity
+            android:name="db.operations.EditEmployee"
+            android:label="Edit Product" >
+        </activity>
+        <activity android:name="db.operations.EditProject" >
+        </activity>
+        <activity android:name="db.operations.EditTask" >
+        </activity>
+        <activity android:name="com.example.spwandroid.EmailWindow" >
+        </activity>
+    </application>
+
+</manifest>
